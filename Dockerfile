@@ -6,8 +6,8 @@ RUN apt-get update \
   && apt-get install -y curl \
   && curl https://raw.githubusercontent.com/BrettSheleski/comchap/master/comchap > /usr/bin/comchap \
   && chmod +x /usr/bin/comchap \
-  && apt-get remove curl \
-  && apt-get purge curl \
+  && apt-get remove -y curl \
+  && apt-get purge -y curl \
   && rm -rf /var/lib/apt/lists/*
 
 # Install the latest comskip
